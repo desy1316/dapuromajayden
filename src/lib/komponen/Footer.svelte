@@ -42,22 +42,23 @@
     }
 
     .footer-glass {
-        /* Warna putih transparan banget */
-        background: rgba(255, 255, 255, 0.4) !important;
+        background: var(--glass-bg) !important;
 
         /* EFEK UTAMA: Blur di belakang navbar */
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px); /* Support Safari iPhone */
 
         /* Border tipis biar kelihatan ada dimensi kaca */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease;
     }
 
     i {
-        color: rgb(0, 0, 0);
+        color: var(--text-color);
     }
     .bx-border-circle {
-        border-color: #615f5f !important;
+        border-color: var(--text-color) !important;
+        opacity: 0.5;
     }
     a {
         font-size: 1.2rem;

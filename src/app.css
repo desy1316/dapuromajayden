@@ -1,5 +1,79 @@
 :root {
   --prime: rgb(250, 82, 4);
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #f8f9fa;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+}
+
+:root.dark {
+  --bg-color: #121212;
+  --text-color: #f8f9fa;
+  --card-bg: #1e1e1e;
+  --glass-bg: rgba(0, 0, 0, 0.6);
+}
+
+html,
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  min-height: 100vh;
+}
+
+
+.jumbotron {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  transition: background 0.3s ease, border 0.3s ease;
+  color: var(--text-color) !important;
+}
+
+:root.dark .jumbotron {
+  background: rgba(30, 30, 30, 0.85) !important;
+  /* Lebih gelap buat contrast */
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+ul,
+li {
+  color: inherit !important;
+}
+
+/* Fix for list-group-item in dark mode */
+.list-group-item {
+  background-color: transparent !important;
+  color: var(--text-color) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:root.dark .list-group-item {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  /* Sedikit ada tint biar kelihatan batasnya */
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  color: #f8f9fa !important;
+  /* Force white text in dark mode */
+}
+
+.bg-light,
+.card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.card-body,
+.card-header,
+.card-footer {
+  background-color: transparent !important;
+  color: inherit !important;
 }
 
 .btn-oyen {
@@ -12,7 +86,19 @@
 }
 
 
+.btn-white {
+  background-color: #fff !important;
+  color: #212529 !important;
+}
+
+:root.dark .btn-white {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f8f9fa !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
 @media(max-width:576px) {
+
   .navbar-toggler {
     display: none !important;
   }
