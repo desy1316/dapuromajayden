@@ -14,6 +14,9 @@
 
 <style>
     @media (max-width: 576px) {
+        .jumbotron {
+            text-align: center;
+        }
         p {
             font-size: 1rem;
         }

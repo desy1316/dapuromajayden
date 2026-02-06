@@ -161,6 +161,7 @@
     }
 
     onMount(async () => {
+        bolehOrder();
         await getkategori();
         await FetchMenus();
         loading = false;

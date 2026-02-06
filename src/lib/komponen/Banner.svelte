@@ -36,9 +36,10 @@
             13,
         );
 
-        L.tileLayer("http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}", {
-            maxZoom: 20,
-            subdomains: ["mt0", "mt1", "mt2", "mt3"],
+        L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            maxZoom: 19,
+            attribution:
+                '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }).addTo(map);
 
         L.marker([-10.196283596158715, 123.58164825483455])
@@ -63,7 +64,7 @@
                         {/each}
                     </div>
                     <div class="col-lg-8">
-                        <img {src} class="img-fluid w-100" />
+                        <img {src} class="img-fluid w-100" alt="..." />
                     </div>
                 </div>
             </div>

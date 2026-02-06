@@ -182,6 +182,7 @@
     }
 
     onMount(() => {
+        bolehOrder();
         getKeranjangBelanja();
         setTimeout(() => {
             loading = false;
