@@ -100,7 +100,7 @@
                 <div id="map"></div>
             </div>
             <div class="col-lg-4">
-                <p>
+                <p class="mt-4">
                     <i class="bx bx-home"></i>
                     Jl. Jambu No.55, RT./RW/RW.005, 002, Batuplat, Kec. Alak, Kota
                     Kupang, Nusa Tenggara Tim. 85228

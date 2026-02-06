@@ -3,6 +3,9 @@
     import { supabase } from "../supabase";
     import { onMount } from "svelte";
     import { daftaritem } from "../store/store";
+    import Slider from "../komponen/Slider.svelte";
+    import AOS from "aos";
+    import "aos/dist/aos.css";
     let allMenus = []; // 🔹 DATA ASLI
     let menus = []; // 🔹 DATA TAMPIL
     let kategoris = [];
@@ -166,6 +169,10 @@
         await FetchMenus();
         loading = false;
     });
+
+    AOS.init({
+        once: true,
+    });
 </script>
 
 <!-- Modal Preorder (Svelte Controlled Bootstrap Style) -->
@@ -270,6 +277,9 @@
 {/if}
 
 <section class="mt-5 p-2">
+    <div class="container">
+        <Slider />
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -382,7 +392,13 @@
                     </div>
                     <div class="grid-menu">
                         {#each mymenu as menu}
-                            <div class="my-1">
+                            <div
+                                class="my-1"
+                                data-aos="fade-zoom-in"
+                                data-aos-offset="200"
+                                data-aos-delay="200"
+                                data-aos-duration="2500"
+                            >
                                 <img
                                     src={menu.imageUrl}
                                     alt=".."
