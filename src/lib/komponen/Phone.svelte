@@ -14,7 +14,7 @@
     <div class="text-center">Loading....</div>
 {:else}
     <section class="my-4 py-4" data-aos="fade-down" data-aos-duration="2000">
-        <div class="container-fluid">
+        <div class="container">
             <div class="icon-grid">
                 <div class="card">
                     <div class="card-body">
