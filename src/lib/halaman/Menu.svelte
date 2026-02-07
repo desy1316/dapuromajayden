@@ -1,4 +1,5 @@
 <script>
+    import Phone from "../komponen/Phone.svelte";
     import { formatharga } from "../helper";
     import { supabase } from "../supabase";
     import { onMount } from "svelte";
@@ -482,6 +483,7 @@
             </div>
         </div>
     </div>
+    <Phone />
 </section>
 
 <style>
