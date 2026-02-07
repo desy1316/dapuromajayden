@@ -8,7 +8,7 @@
     }, 2500);
 </script>
 
-<section class="service mb-5 pb-5">
+<section class="service mt-5 mb-5 pb-5">
     {#if loading}
         <p class="lead text-center">Sedang Memuat Data ....</p>
     {:else}

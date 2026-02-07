@@ -32,6 +32,10 @@
                     <i class="bx bxs-package bx-border-circle"></i>
                     Layanan
                 </a>
+                <a class="nav-link" href="#/jeglek-rescue">
+                    <i class="bx bxs-plug bx-border-circle bx-burst"></i>
+                    Dokter Listrik
+                </a>
                 <a class="nav-link" href="#/keranjang">
                     <i class="bx bxs-cart bx-border-circle"></i>
                     Keranjang

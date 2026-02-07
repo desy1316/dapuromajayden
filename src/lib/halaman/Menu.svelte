@@ -294,57 +294,64 @@
                         </h3>
                     </div>
                 {:else if detail}
-                    <div class="row justify-content-between">
-                        <div class="col-lg-4 text-center my-3">
-                            <img
-                                src={detaildatamenu.posterdata}
-                                alt="..."
-                                class="img-fluid image-detail"
-                            />
-                        </div>
-                        <div class="col-lg-6">
-                            <h1>{detaildatamenu.nama_produk}</h1>
-                            <hr />
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-3 text-center my-3">
+                                    <img
+                                        src={detaildatamenu.posterdata}
+                                        alt="..."
+                                        class="img-fluid image-detail detail_image"
+                                    />
+                                </div>
+                                <div class="col-lg-9">
+                                    <h1>{detaildatamenu.nama_produk}</h1>
+                                    <hr />
 
-                            <h6 class="text-muted">
-                                <i class="bx bx-wallet-alt bx-border-circle"
-                                ></i>
-                                {formatharga(detaildatamenu.harga)} / {detaildatamenu.satuan}
-                            </h6>
+                                    <h6 class="text-muted">
+                                        <i
+                                            class="bx bx-wallet-alt bx-border-circle"
+                                        ></i>
+                                        {formatharga(detaildatamenu.harga)} / {detaildatamenu.satuan}
+                                    </h6>
 
-                            <p class="text-muted">
-                                {#if detaildatamenu.preorder}
-                                    Menu ini harus dipesan terlebih dahulu
-                                {:else}
-                                    Ready
-                                {/if}
-                            </p>
+                                    <p class="text-muted">
+                                        {#if detaildatamenu.preorder}
+                                            Menu ini harus dipesan terlebih
+                                            dahulu
+                                        {:else}
+                                            Ready
+                                        {/if}
+                                    </p>
 
-                            <p>
-                                <span
-                                    role="button"
-                                    data-toggle="collapse"
-                                    data-target="#collapseExample"
-                                    class="oyen font-weight-bolder"
-                                >
-                                    Baca Deskripsi Produk
-                                </span>
-                            </p>
-                            <div class="collapse" id="collapseExample">
-                                <div class="card card-body">
-                                    {detaildatamenu.deskripsi}
+                                    <p>
+                                        <span
+                                            role="button"
+                                            data-toggle="collapse"
+                                            data-target="#collapseExample"
+                                            class="oyen font-weight-bolder"
+                                        >
+                                            Baca Deskripsi Produk
+                                        </span>
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="card card-body">
+                                            {detaildatamenu.deskripsi}
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="btn btn-oyen mt-2 btn-sm"
+                                        on:click={() => (
+                                            (detail = false),
+                                            (pencarianmenu = "")
+                                        )}
+                                    >
+                                        <i class="bx bx-undo oyen"></i>
+                                        Kembali
+                                    </button>
                                 </div>
                             </div>
-
-                            <button
-                                class="btn btn-outline-dark mt-2 btn-sm"
-                                on:click={() => (
-                                    (detail = false), (pencarianmenu = "")
-                                )}
-                            >
-                                <i class="bx bx-undo oyen"></i>
-                                Kembali
-                            </button>
                         </div>
                     </div>
                 {:else}
@@ -487,6 +494,9 @@
 </section>
 
 <style>
+    .detail_image {
+        border-radius: 15px !important;
+    }
     .btn,
     .form-control {
         border-radius: 25px !important;

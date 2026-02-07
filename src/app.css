@@ -76,6 +76,12 @@ li {
   color: inherit !important;
 }
 
+:root.dark .alert-secondary {
+  background-color: #1a1a1a !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 .btn-oyen {
   background-color: var(--prime) !important;
   color: #fff !important;
