@@ -1,11 +1,6 @@
 <script>
     const herotitle = "dapuromajayden";
     const herotagline = "Sarapan Pagi Biar Tidak Dimarahin Lambung";
-    import { theme } from "../store/store";
-
-    function toggleTheme() {
-        theme.update((t) => (t === "light" ? "dark" : "light"));
-    }
 </script>
 
 <div class="container">
@@ -15,20 +10,6 @@
             <p class="lead text-capitalize">
                 {herotagline}
             </p>
-
-            <!-- darkmode  -->
-            <button
-                class="btn btn-white border shadow-sm"
-                on:click={toggleTheme}
-            >
-                {#if $theme === "light"}
-                    <i class="bx bx-moon text-warning"></i>
-                    Dark Mode
-                {:else}
-                    <i class="bx bx-sun text-warning"></i>
-                    Light Mode
-                {/if}
-            </button>
         </div>
     </div>
 </div>

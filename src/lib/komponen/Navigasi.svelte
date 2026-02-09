@@ -1,8 +1,12 @@
 <script>
     const navname = "dapuromajayden";
-    import { daftaritem } from "../store/store";
+    import { daftaritem, theme } from "../store/store";
     let count = 0;
     $: count = $daftaritem.length;
+
+    function toggleTheme() {
+        theme.update((t) => (t === "light" ? "dark" : "light"));
+    }
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top navbar-glass">
@@ -11,6 +15,24 @@
             <i class="bx bx-store-alt oyen bx-border-circle"></i>
             {navname}
         </a>
+
+        <!-- Dark Mode Toggle - Always Visible -->
+        <div class="d-flex align-items-center ml-auto mr-2 order-lg-last">
+            <button
+                class="btn-theme-toggle"
+                on:click={toggleTheme}
+                aria-label="Toggle Theme"
+            >
+                {#if $theme === "light"}
+                    <i class="bx bx-moon"></i>
+                    <small class="d-none d-md-inline ml-1">Dark Mode</small>
+                {:else}
+                    <i class="bx bx-sun"></i>
+                    <small class="d-none d-md-inline ml-1">Light Mode</small>
+                {/if}
+            </button>
+        </div>
+
         <button
             class="navbar-toggler"
             type="button"
@@ -73,5 +95,37 @@
 
     .nav-link {
         font-size: 0.8rem !important;
+    }
+
+    /* Dark Mode Toggle Styles */
+    .btn-theme-toggle {
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        transition: background 0.3s;
+    }
+
+    .btn-theme-toggle small {
+        font-weight: 500;
+        font-size: 0.75rem;
+    }
+
+    .btn-theme-toggle:hover {
+        background: rgba(var(--oyen-rgb), 0.1);
+    }
+
+    .bx-moon {
+        color: #f1c40f;
+    }
+
+    .bx-sun {
+        color: #f39c12;
     }
 </style>

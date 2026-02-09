@@ -94,7 +94,7 @@
             return items;
         });
 
-        alert("berhasil");
+        alert("berhasil menambahkan item ke dalam keranjang");
     }
 
     $: mymenu = allMenus.filter((data) => {
