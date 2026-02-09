@@ -55,4 +55,10 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
+
+    @media (max-width: 576px) {
+        p {
+            font-size: 0.9rem;
+        }
+    }
 </style>

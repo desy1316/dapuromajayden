@@ -23,6 +23,9 @@
         .jumbotron {
             text-align: center;
         }
+        h1 {
+            font-size: 1.5rem;
+        }
         p {
             font-size: 1rem;
         }
