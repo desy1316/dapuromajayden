@@ -369,8 +369,8 @@
                                     <div
                                         class="d-flex justify-content-between align-items-center mt-4 mb-0 flex-wrap"
                                     >
-                                        <p
-                                            role="button"
+                                        <button
+                                            class="btn btn-white"
                                             title="semua kategori"
                                             on:click={() =>
                                                 filterKategori(null)}
@@ -379,7 +379,7 @@
                                                 class="bx bx-category bx-border-circle oyen"
                                             ></i>
                                             Semua
-                                        </p>
+                                        </button>
                                         {#each kategoris as kategori}
                                             <p
                                                 role="button"
@@ -451,7 +451,7 @@
                                 </p>
 
                                 <!-- Preorder -->
-                                <p>
+                                <div>
                                     {#if menu.preorder == true}
                                         <button
                                             on:click={() => openPreorder(menu)}
@@ -475,14 +475,14 @@
                                             Keranjang
                                         </button>
                                     {:else}
-                                        <p class="small">
+                                        <div class="small">
                                             <i
                                                 class="bx bx-cart bx-border-circle"
                                             ></i>
-                                            Lapak Tutup
-                                        </p>
+                                            <p>Lapak Tutup</p>
+                                        </div>
                                     {/if}
-                                </p>
+                                </div>
                             </div>
                         {/each}
                     </div>

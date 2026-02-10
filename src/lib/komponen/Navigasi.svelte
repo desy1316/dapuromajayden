@@ -50,10 +50,7 @@
                     <i class="bx bx-home-heart bx-border-circle"></i>
                     Home
                 </a>
-                <a class="nav-link" href="#/service">
-                    <i class="bx bxs-package bx-border-circle"></i>
-                    Layanan
-                </a>
+
                 <a class="nav-link" href="#/jeglek-rescue">
                     <i class="bx bxs-plug bx-border-circle bx-burst"></i>
                     Dokter Listrik

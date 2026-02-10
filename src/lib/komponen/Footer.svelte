@@ -18,10 +18,6 @@
             <i class="bx bxs-plug bx-border-circle"></i>
         </a>
 
-        <a href="#/service" class="text-decoration-none" title="Service">
-            <i class="bx bxs-washer bx-border-circle"></i>
-        </a>
-
         <a href="#/keranjang" class="text-decoration-none" title="Homepage">
             <i class="bx bx-cart bx-border-circle"></i>
             <sup>
