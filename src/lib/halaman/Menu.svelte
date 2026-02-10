@@ -416,23 +416,27 @@
                                 <ul
                                     class="list-group list-group-flush mt-3 mb-0"
                                 >
-                                    <li class="list-group-item small">
-                                        <span class="float-left">
+                                    <li
+                                        class="list-group-item small d-flex justify-content-between align-items-center"
+                                    >
+                                        <span>
                                             <i
                                                 class="bx bx-bowl-hot bx-border-circle oyen"
                                             ></i>
                                         </span>
-                                        <span class="float-right">
+                                        <span>
                                             {menu.nama_produk}
                                         </span>
                                     </li>
-                                    <li class="list-group-item small">
-                                        <span class="float-left">
+                                    <li
+                                        class="list-group-item small d-flex justify-content-between align-items-center"
+                                    >
+                                        <span>
                                             <i
                                                 class="bx bx-wallet-alt bx-border-circle oyen"
                                             ></i>
                                         </span>
-                                        <span class="float-right">
+                                        <span>
                                             {formatharga(menu.harga)} / {menu.satuan}
                                         </span>
                                     </li>
