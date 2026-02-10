@@ -401,7 +401,7 @@
                     <div class="grid-menu">
                         {#each mymenu as menu}
                             <div
-                                class="my-1"
+                                class="my-4"
                                 data-aos="fade-zoom-in"
                                 data-aos-offset="200"
                                 data-aos-delay="200"
@@ -413,58 +413,73 @@
                                     class="img-fluid"
                                 />
 
-                                <ul
-                                    class="list-group list-group-flush mt-3 mb-0"
-                                >
-                                    <li class="list-group-item">
-                                        {menu.nama_produk}
-                                    </li>
-                                    <li class="list-group-item">
-                                        Rp. {formatharga(menu.harga)} / {menu.satuan}
-                                    </li>
-                                </ul>
-                                <p>
-                                    <button
-                                        title="detail menu"
-                                        class="btn btn-white btn-sm mt-2"
-                                        on:click={() => menuDetail(menu.id)}
-                                    >
-                                        <i
-                                            class="bx bxs-message-square-dots oyen"
-                                        ></i>
-                                        Detail Menu
-                                    </button>
-                                </p>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h6>
+                                            <i
+                                                class="bx bx-bowl-rice bx-border-circle"
+                                            ></i>
+                                            {menu.nama_produk}
+                                        </h6>
+                                        <h6>
+                                            <i
+                                                class="bx bx-wallet bx-border-circle"
+                                            ></i>
+                                            {formatharga(menu.harga)} / {menu.satuan}
+                                        </h6>
 
-                                <!-- Preorder -->
-                                <div>
-                                    {#if menu.preorder == true}
-                                        <button
-                                            on:click={() => openPreorder(menu)}
-                                            class="btn btn-white btn-sm"
-                                            title="klik untuk preorder"
+                                        <div
+                                            class="d-flex justify-content-between align-items-center"
                                         >
-                                            <i
-                                                class="bx bxl-whatsapp oyen bx-border-circle"
-                                            ></i>
-                                            Preorder
-                                        </button>
-                                    {:else if orderCheck}
-                                        <button
-                                            on:click={() => addtoCart(menu)}
-                                            class="btn btn-sm btn-light"
-                                            title="hubungi penyedia"
-                                        >
-                                            <i
-                                                class="bx bx-cart-add bx border-circle"
-                                            ></i>
-                                            Keranjang
-                                        </button>
-                                    {:else}
-                                        <div class="small text-center">
-                                            <p>Lapak Tutup</p>
+                                            <button
+                                                title="detail menu"
+                                                class="btn btn-white btn-sm mt-2"
+                                                on:click={() =>
+                                                    menuDetail(menu.id)}
+                                            >
+                                                <i
+                                                    class="bx bxs-message-square-dots oyen"
+                                                ></i>
+                                            </button>
+
+                                            <!-- Preorder -->
+                                            <div>
+                                                {#if menu.preorder == true}
+                                                    <button
+                                                        on:click={() =>
+                                                            openPreorder(menu)}
+                                                        class="btn btn-white btn-sm mt-2"
+                                                        title="klik untuk preorder"
+                                                    >
+                                                        <i
+                                                            class="bx bxl-whatsapp oyen bx-border-circle"
+                                                        ></i>
+                                                    </button>
+                                                {:else if orderCheck}
+                                                    <button
+                                                        on:click={() =>
+                                                            addtoCart(menu)}
+                                                        class="btn btn-sm btn-white"
+                                                        title="hubungi penyedia"
+                                                    >
+                                                        <i
+                                                            class="bx bx-cart-add bx border-circle"
+                                                        ></i>
+                                                    </button>
+                                                {:else}
+                                                    <div
+                                                        class="small text-center"
+                                                    >
+                                                        <p
+                                                            class="mt-2 mb-0 small"
+                                                        >
+                                                            Lapak Tutup
+                                                        </p>
+                                                    </div>
+                                                {/if}
+                                            </div>
                                         </div>
-                                    {/if}
+                                    </div>
                                 </div>
                             </div>
                         {/each}
@@ -486,13 +501,14 @@
     }
     .grid-menu {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
 
     .grid-menu img {
         display: block;
         width: 100%;
+        height: 250px;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
     }
@@ -500,6 +516,13 @@
     @media (max-width: 576px) {
         .grid-menu {
             grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-menu img {
+            height: 220px;
+        }
+
+        h6 {
+            font-size: 0.8rem;
         }
 
         .image-detail {
