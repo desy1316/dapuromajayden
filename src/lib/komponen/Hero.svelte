@@ -3,14 +3,14 @@
     const herotagline = "Sarapan Pagi Biar Tidak Dimarahin Lambung";
 </script>
 
-<div class="container">
-    <div class="jumbotron bg-light">
-        <div class="container">
-            <h1 class="font-weight-bolder oyen text-capitalize">{herotitle}</h1>
-            <p class="lead text-capitalize">
-                {herotagline}
-            </p>
-        </div>
+<div class="jumbotron bg-light">
+    <div class="container-fluid">
+        <h1 class="font-weight-bolder oyen text-capitalize dapuroma">
+            {herotitle}
+        </h1>
+        <p class="lead text-capitalize">
+            {herotagline}
+        </p>
     </div>
 </div>
 
@@ -24,7 +24,7 @@
             text-align: center;
         }
         h1 {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
         }
         p {
             font-size: 1rem;

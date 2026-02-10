@@ -455,7 +455,7 @@
                                     {#if menu.preorder == true}
                                         <button
                                             on:click={() => openPreorder(menu)}
-                                            class="btn btn-white"
+                                            class="btn btn-white btn-sm"
                                             title="klik untuk preorder"
                                         >
                                             <i
@@ -475,10 +475,7 @@
                                             Keranjang
                                         </button>
                                     {:else}
-                                        <div class="small">
-                                            <i
-                                                class="bx bx-cart bx-border-circle"
-                                            ></i>
+                                        <div class="small text-center">
                                             <p>Lapak Tutup</p>
                                         </div>
                                     {/if}
@@ -510,6 +507,8 @@
     .grid-menu img {
         display: block;
         width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
     @media (max-width: 576px) {

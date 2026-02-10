@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import "aos/dist/aos.css";
     let loading = true;
+    import Hero from "./Hero.svelte";
 
     onMount(() => {
         setTimeout(() => {
@@ -15,34 +16,43 @@
 {:else}
     <section class="my-4 py-4" data-aos="fade-down" data-aos-duration="2000">
         <div class="container">
-            <div class="icon-grid">
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="text-center">
-                            <i class="bx bx-store-alt bx-border-circle oyen"
-                            ></i>
-                            <p class="lead">Pesan</p>
-                        </h1>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="icon-grid">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="text-center">
+                                    <i
+                                        class="bx bx-store-alt bx-border-circle oyen"
+                                    ></i>
+                                    <p class="lead">Pesan</p>
+                                </h1>
+                            </div>
+                        </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="text-center font-weight-bold">
-                            <i class="bx bx-bowl-hot bx-border-circle oyen"></i>
-                            <p class="lead">Makan</p>
-                        </h1>
-                    </div>
-                </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="text-center font-weight-bold">
+                                    <i
+                                        class="bx bx-bowl-hot bx-border-circle oyen"
+                                    ></i>
+                                    <p class="lead">Makan</p>
+                                </h1>
+                            </div>
+                        </div>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h1 class="text-center">
-                            <i class="bx bx-wink-smile bx-border-circle oyen"
-                            ></i>
-                            <p class="lead">Happy</p>
-                        </h1>
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 class="text-center">
+                                    <i
+                                        class="bx bx-wink-smile bx-border-circle oyen"
+                                    ></i>
+                                    <p class="lead">Happy</p>
+                                </h1>
+                            </div>
+                        </div>
                     </div>
+                    <Hero />
                 </div>
             </div>
         </div>
@@ -53,7 +63,7 @@
     .icon-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 5px;
     }
 
     @media (max-width: 576px) {

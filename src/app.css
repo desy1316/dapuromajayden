@@ -13,6 +13,16 @@
   --glass-bg: rgba(0, 0, 0, 0.6);
 }
 
+@font-face {
+  font-family: "Bellfoods";
+  src: url('../public/fonts/Bellfoods.otf');
+}
+
+
+.dapuroma {
+  font-family: 'Bellfoods';
+}
+
 html,
 body {
   background-color: var(--bg-color) !important;

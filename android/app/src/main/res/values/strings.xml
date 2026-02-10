@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DapurOmaJayden</string>
+    <string name="title_activity_main">DapurOmaJayden</string>
+    <string name="package_name">com.dapuromajayden.app</string>
+    <string name="custom_url_scheme">com.dapuromajayden.app</string>
+</resources>
